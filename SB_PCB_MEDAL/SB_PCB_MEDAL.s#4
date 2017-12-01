@@ -5356,6 +5356,9 @@ BATTERY</description>
 <text x="-17.78" y="93.98" size="2.54" layer="97">SourceBots - PCB Medal Schematic
 Version 1.0
 Anton Nikitin - Henry Oliver-Edwards</text>
+<text x="-20.32" y="66.04" size="1.778" layer="97">VCC</text>
+<text x="91.44" y="66.04" size="1.778" layer="97">GND</text>
+<text x="50.8" y="27.94" size="1.778" layer="97">VCC</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="-7.62" y="66.04"/>
@@ -5426,13 +5429,25 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <wire x1="66.04" y1="27.94" x2="71.12" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<wire x1="88.9" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="VCC"/>
+<wire x1="-7.62" y1="66.04" x2="-20.32" y2="66.04" width="0.1524" layer="91"/>
+</segment>
 <segment>
 <pinref part="ICSP" gate="1" pin="5"/>
 <wire x1="10.16" y1="33.02" x2="15.24" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="33.02" x2="15.24" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="BT1" gate="G$1" pin="+"/>
+<wire x1="55.88" y1="27.94" x2="50.8" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
