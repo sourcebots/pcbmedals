@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.4.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -4673,9 +4674,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LED4" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED5" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED6" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
-<part name="LED7" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED8" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
-<part name="LED9" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED10" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED11" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED12" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
@@ -4739,9 +4738,7 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <instance part="LED4" gate="G$1" x="160.02" y="55.88" rot="R270"/>
 <instance part="LED5" gate="G$1" x="144.78" y="25.4" rot="R90"/>
 <instance part="LED6" gate="G$1" x="160.02" y="40.64" rot="R270"/>
-<instance part="LED7" gate="G$1" x="144.78" y="25.4" rot="R90"/>
 <instance part="LED8" gate="G$1" x="144.78" y="10.16" rot="R90"/>
-<instance part="LED9" gate="G$1" x="144.78" y="10.16" rot="R90"/>
 <instance part="LED10" gate="G$1" x="160.02" y="25.4" rot="R270"/>
 <instance part="LED11" gate="G$1" x="144.78" y="-5.08" rot="R90"/>
 <instance part="LED12" gate="G$1" x="160.02" y="10.16" rot="R270"/>
@@ -4841,12 +4838,6 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <wire x1="63.5" y1="30.48" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="LED26" gate="G$1" pin="A"/>
-<wire x1="381" y1="40.64" x2="381" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="K"/>
@@ -4857,21 +4848,17 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <segment>
 <pinref part="LED3" gate="G$1" pin="K"/>
 <pinref part="LED5" gate="G$1" pin="A"/>
-<pinref part="LED7" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="LED5" gate="G$1" pin="K"/>
-<pinref part="LED7" gate="G$1" pin="K"/>
 <pinref part="LED8" gate="G$1" pin="A"/>
-<pinref part="LED9" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="LED8" gate="G$1" pin="K"/>
-<pinref part="LED9" gate="G$1" pin="K"/>
 <pinref part="LED11" gate="G$1" pin="A"/>
 </segment>
 </net>

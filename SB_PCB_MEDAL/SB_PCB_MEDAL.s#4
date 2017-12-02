@@ -5337,8 +5337,7 @@ BATTERY</description>
 <part name="ICSP" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-2" device="" package3d_urn="urn:adsk.eagle:package:8334/1"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="BT1" library="SparkFun-Batteries" library_urn="urn:adsk.eagle:library:508" deviceset="BATTERY" device="-24.5MM_PTH" package3d_urn="urn:adsk.eagle:package:37222/1"/>
-<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="BT1" library="SparkFun-Batteries" library_urn="urn:adsk.eagle:library:508" deviceset="BATTERY" device="-12MM_PTH" package3d_urn="urn:adsk.eagle:package:37213/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -5358,7 +5357,8 @@ Version 1.0
 Anton Nikitin - Henry Oliver-Edwards</text>
 <text x="-20.32" y="66.04" size="1.778" layer="97">VCC</text>
 <text x="91.44" y="66.04" size="1.778" layer="97">GND</text>
-<text x="50.8" y="27.94" size="1.778" layer="97">VCC</text>
+<text x="78.74" y="30.48" size="1.778" layer="97">GND</text>
+<text x="58.42" y="30.48" size="1.778" layer="97">VCC</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="-7.62" y="66.04"/>
@@ -5371,8 +5371,7 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <instance part="ICSP" gate="1" x="2.54" y="30.48"/>
 <instance part="GND1" gate="1" x="15.24" y="17.78"/>
 <instance part="P+1" gate="VCC" x="15.24" y="43.18"/>
-<instance part="BT1" gate="G$1" x="60.96" y="27.94"/>
-<instance part="GND2" gate="1" x="73.66" y="27.94" rot="R90"/>
+<instance part="BT1" gate="G$1" x="68.58" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -5425,13 +5424,12 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BT1" gate="G$1" pin="-"/>
-<wire x1="66.04" y1="27.94" x2="71.12" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <wire x1="88.9" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="BT1" gate="G$1" pin="-"/>
+<wire x1="73.66" y1="30.48" x2="78.74" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -5447,7 +5445,7 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 </segment>
 <segment>
 <pinref part="BT1" gate="G$1" pin="+"/>
-<wire x1="55.88" y1="27.94" x2="50.8" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="30.48" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
