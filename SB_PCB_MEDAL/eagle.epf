@@ -352,7 +352,7 @@ UsedLibrary="C:/EAGLE 8.3.1/lbr/SamacSys_Parts.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="-9 -38 1190 601"
+Loc="0 0 1199 639"
 State=2
 Number=0
 
