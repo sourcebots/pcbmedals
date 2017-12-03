@@ -4879,8 +4879,6 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <segment>
 <pinref part="LED10" gate="G$1" pin="A"/>
 <pinref part="LED12" gate="G$1" pin="K"/>
-<wire x1="127" y1="10.16" x2="160.02" y2="10.16" width="0.1524" layer="91"/>
-<junction x="160.02" y="10.16"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -4899,40 +4897,6 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <segment>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <pinref part="LED4" gate="G$1" pin="K"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="LED32" gate="G$1" pin="K"/>
-<wire x1="129.54" y1="71.12" x2="513.08" y2="71.12" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="LED30" gate="G$1" pin="K"/>
-<wire x1="129.54" y1="55.88" x2="474.98" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="LED27" gate="G$1" pin="K"/>
-<wire x1="129.54" y1="40.64" x2="393.7" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="LED20" gate="G$1" pin="K"/>
-<wire x1="129.54" y1="25.4" x2="287.02" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="129.54" y1="-5.08" x2="513.08" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

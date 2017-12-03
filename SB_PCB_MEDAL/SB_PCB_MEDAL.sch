@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.4.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4719,6 +4719,18 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <text x="91.44" y="66.04" size="1.778" layer="97">GND</text>
 <text x="78.74" y="30.48" size="1.778" layer="97">GND</text>
 <text x="58.42" y="30.48" size="1.778" layer="97">VCC</text>
+<text x="91.44" y="63.5" size="1.778" layer="95">PA0</text>
+<text x="91.44" y="60.96" size="1.778" layer="95">PA1</text>
+<text x="91.44" y="58.42" size="1.778" layer="95">PA2</text>
+<text x="91.44" y="55.88" size="1.778" layer="95">PA3</text>
+<text x="-20.32" y="63.5" size="1.778" layer="95">PB0</text>
+<text x="-20.32" y="60.96" size="1.778" layer="95">PB1</text>
+<text x="114.3" y="81.28" size="1.778" layer="95">PA0</text>
+<text x="114.3" y="60.96" size="1.778" layer="95">PA1</text>
+<text x="114.3" y="40.64" size="1.778" layer="95">PA2</text>
+<text x="114.3" y="20.32" size="1.778" layer="95">PA3</text>
+<text x="114.3" y="0" size="1.778" layer="95">PB0</text>
+<text x="114.3" y="-20.32" size="1.778" layer="95">PB1</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="-7.62" y="66.04"/>
@@ -5072,6 +5084,78 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <wire x1="441.96" y1="66.04" x2="441.96" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="441.96" y1="-20.32" x2="431.8" y2="-20.32" width="0.1524" layer="91"/>
 <junction x="431.8" y="-20.32"/>
+</segment>
+</net>
+<net name="PA0" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PA0[ADC0/AREF/PCINT0]"/>
+<wire x1="88.9" y1="63.5" x2="91.44" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="81.28" x2="114.3" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PA1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PA1[ADC1/AIN0/PCINT1]"/>
+<wire x1="88.9" y1="60.96" x2="91.44" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="60.96" x2="114.3" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PA2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PA2[ADC2/AIN1/PCINT2]"/>
+<wire x1="88.9" y1="58.42" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="40.64" x2="114.3" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PA3" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PA3[ADC3/T0/PCINT3]"/>
+<wire x1="88.9" y1="55.88" x2="91.44" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="20.32" x2="114.3" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PB0" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="[PCINT8/XTAL1/CLKI]PB0"/>
+<wire x1="-7.62" y1="63.5" x2="-20.32" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="0" x2="114.3" y2="0" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="PB1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="[PCINT9/XTAL2]PB1"/>
+<wire x1="-7.62" y1="60.96" x2="-20.32" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="-20.32" x2="114.3" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="[PCINT10/INT0/OC0A/CKOUT]PB2"/>
+<wire x1="-7.62" y1="55.88" x2="-20.32" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="[PCINT7/ICP/OC0B/ADC7]PA7"/>
+<wire x1="-7.62" y1="53.34" x2="-20.32" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

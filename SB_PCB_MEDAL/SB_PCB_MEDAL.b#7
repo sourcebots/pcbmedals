@@ -157,6 +157,12 @@
 <board>
 <plain>
 <circle x="0" y="0" radius="30" width="0.1524" layer="20"/>
+<text x="-12" y="18" size="0.8128" layer="25">1 = GND
+2 = RST
+3 = MOSI
+4 = USCK
+5 = VCC
+6 = MISO</text>
 </plain>
 <libraries>
 <library name="SamacSys_Parts">
@@ -1585,16 +1591,16 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="IC1" library="SamacSys_Parts" package="SOIC127P600X175-14N" value="ATTINY44A-SSU" x="-1.08" y="0.49" rot="MR90">
-<attribute name="3D_PACKAGE" value="" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="ALLIED_NUMBER" value="" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="DESCRIPTION" value="ATTINY44A-SSU, 8 bit AVR Microcontroller 20MHz 256 B, 4 kB Flash, 256 B RAM, I2C 14-Pin SOIC" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="HEIGHT" value="1.75mm" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="Microchip" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="ATTINY44A-SSU" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="OTHER_PART_NUMBER" value="" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="RS_PART_NUMBER" value="1331640P" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="SUPPLIER_NAME" value="RS" x="-1.08" y="0.49" size="1.778" layer="28" rot="MR90" display="off"/>
+<element name="IC1" library="SamacSys_Parts" package="SOIC127P600X175-14N" value="ATTINY44A-SSU" x="0.08" y="0.51" rot="MR270">
+<attribute name="3D_PACKAGE" value="" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="ALLIED_NUMBER" value="" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="DESCRIPTION" value="ATTINY44A-SSU, 8 bit AVR Microcontroller 20MHz 256 B, 4 kB Flash, 256 B RAM, I2C 14-Pin SOIC" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="HEIGHT" value="1.75mm" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Microchip" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="ATTINY44A-SSU" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="OTHER_PART_NUMBER" value="" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="RS_PART_NUMBER" value="1331640P" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="SUPPLIER_NAME" value="RS" x="0.08" y="0.51" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" package3d_urn="urn:adsk.eagle:package:26079/1" value="10 Ω" x="-18" y="9" rot="MR90"/>
 <element name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" package3d_urn="urn:adsk.eagle:package:26079/1" value="10 Ω" x="-11" y="9" rot="MR90"/>
@@ -1602,48 +1608,48 @@ design rules under a new name.</description>
 <element name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" package3d_urn="urn:adsk.eagle:package:26079/1" value="10 Ω" x="3" y="9" rot="MR90"/>
 <element name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" package3d_urn="urn:adsk.eagle:package:26079/1" value="10 Ω" x="10" y="9" rot="MR90"/>
 <element name="R6" library="resistor" library_urn="urn:adsk.eagle:library:348" package="M0805" package3d_urn="urn:adsk.eagle:package:26079/1" value="10 Ω" x="17" y="9" rot="MR90"/>
-<element name="ICSP" library="con-lstb" library_urn="urn:adsk.eagle:library:162" package="MA03-2" package3d_urn="urn:adsk.eagle:package:8334/1" value="" x="0" y="-24">
-<attribute name="MF" value="" x="0" y="-24" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="0" y="-24" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="0" y="-24" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="0" y="-24" size="1.778" layer="27" display="off"/>
+<element name="ICSP" library="con-lstb" library_urn="urn:adsk.eagle:library:162" package="MA03-2" package3d_urn="urn:adsk.eagle:package:8334/1" value="" x="0" y="22">
+<attribute name="MF" value="" x="0" y="22" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="0" y="22" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="0" y="22" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="0" y="22" size="1.778" layer="27" display="off"/>
 </element>
-<element name="BT1" library="SparkFun-Batteries" library_urn="urn:adsk.eagle:library:508" package="BATTCON_24.5MM_PTH" package3d_urn="urn:adsk.eagle:package:37222/1" value="" x="-3" y="-47">
-<attribute name="SF_SKU" value="PRT-08863" x="-3" y="-47" size="1.778" layer="27" display="off"/>
+<element name="BT1" library="SparkFun-Batteries" library_urn="urn:adsk.eagle:library:508" package="BATTCON_24.5MM_PTH" package3d_urn="urn:adsk.eagle:package:37222/1" value="" x="0" y="-14" rot="MR0">
+<attribute name="SF_SKU" value="PRT-08863" x="0" y="-14" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 </elements>
 <signals>
 <signal name="VCC">
 <contactref element="ICSP" pad="5"/>
 <contactref element="IC1" pad="1"/>
-<wire x1="2.73" y1="-2.221" x2="2.54" y2="-25.27" width="0" layer="19" extent="16-16"/>
+<wire x1="-3.73" y1="3.221" x2="2.54" y2="20.73" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="GND">
 <contactref element="IC1" pad="14"/>
 <contactref element="ICSP" pad="1"/>
 <contactref element="BT1" pad="2"/>
-<wire x1="-2.54" y1="-25.27" x2="-3" y2="-47" width="0" layer="19" extent="1-1"/>
-<wire x1="2.73" y1="3.201" x2="-2.54" y2="-25.27" width="0" layer="19" extent="16-16"/>
+<wire x1="-2.54" y1="20.73" x2="0" y2="-14" width="0" layer="19" extent="1-1"/>
+<wire x1="-3.73" y1="-2.201" x2="-2.54" y2="20.73" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="MISO">
 <contactref element="ICSP" pad="6"/>
 <contactref element="IC1" pad="8"/>
-<wire x1="-4.89" y1="3.201" x2="2.54" y2="-22.73" width="0" layer="19" extent="16-16"/>
+<wire x1="3.89" y1="-2.201" x2="2.54" y2="23.27" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="MOSI">
 <contactref element="IC1" pad="7"/>
 <contactref element="ICSP" pad="3"/>
-<wire x1="-4.89" y1="-2.221" x2="0" y2="-25.27" width="0" layer="19" extent="16-16"/>
+<wire x1="3.89" y1="3.221" x2="0" y2="20.73" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="RST">
 <contactref element="IC1" pad="4"/>
 <contactref element="ICSP" pad="2"/>
-<wire x1="-1.08" y1="-2.221" x2="-2.54" y2="-22.73" width="0" layer="19" extent="16-16"/>
+<wire x1="0.08" y1="3.221" x2="-2.54" y2="23.27" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="USCK">
 <contactref element="IC1" pad="9"/>
 <contactref element="ICSP" pad="4"/>
-<wire x1="-3.62" y1="3.201" x2="0" y2="-22.73" width="0" layer="19" extent="16-16"/>
+<wire x1="2.62" y1="-2.201" x2="0" y2="23.27" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$2">
 <contactref element="BT1" pad="3"/>
@@ -1652,6 +1658,10 @@ design rules under a new name.</description>
 </board>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
