@@ -213,6 +213,24 @@
 <wire x1="-1.75" y1="1.05" x2="-1.75" y2="-1.05" width="0.2" layer="25"/>
 <wire x1="-1.75" y1="-1.05" x2="0.95" y2="-1.05" width="0.2" layer="25"/>
 </package>
+<package name="B3FS-1000P">
+<description>&lt;b&gt;B3FS-1000P&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="4" y="-2.25" dx="1.6" dy="1.4" layer="1"/>
+<smd name="2" x="-4" y="-2.25" dx="1.6" dy="1.4" layer="1"/>
+<smd name="3" x="4" y="2.25" dx="1.6" dy="1.4" layer="1"/>
+<smd name="4" x="-4" y="2.25" dx="1.6" dy="1.4" layer="1"/>
+<text x="-0.318" y="0.105" size="1.27" layer="25" align="center">&gt;NAME</text>
+<wire x1="-3" y1="3.15" x2="3" y2="3.15" width="0.254" layer="51"/>
+<wire x1="3" y1="3.15" x2="3" y2="-3.15" width="0.254" layer="51"/>
+<wire x1="3" y1="-3.15" x2="-3" y2="-3.15" width="0.254" layer="51"/>
+<wire x1="-3" y1="-3.15" x2="-3" y2="3.15" width="0.254" layer="51"/>
+<wire x1="-3" y1="3.15" x2="3" y2="3.15" width="0.254" layer="25"/>
+<wire x1="3" y1="3.15" x2="3" y2="-3.15" width="0.254" layer="25"/>
+<wire x1="3" y1="-3.15" x2="-3" y2="-3.15" width="0.254" layer="25"/>
+<wire x1="-3" y1="-3.15" x2="-3" y2="3.15" width="0.254" layer="25"/>
+<circle x="4.869" y="-3.232" radius="0.05691875" width="0.254" layer="25"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATTINY44A-SSU">
@@ -258,6 +276,18 @@
 <vertex x="6.858" y="4.064"/>
 <vertex x="6.096" y="5.588"/>
 </polygon>
+</symbol>
+<symbol name="B3FS-1000P">
+<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="2.54" x2="15.24" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<text x="10.16" y="5.08" size="1.778" layer="95" align="center">&gt;NAME</text>
+<text x="10.16" y="-7.62" size="1.778" layer="96" align="center">&gt;VALUE</text>
+<pin name="1" x="0" y="0" length="middle" direction="pas"/>
+<pin name="2" x="0" y="-2.54" length="middle" direction="pas"/>
+<pin name="3" x="20.32" y="0" length="middle" direction="pas" rot="R180"/>
+<pin name="4" x="20.32" y="-2.54" length="middle" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -327,6 +357,38 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/8610172"&gt; Datashee
 <attribute name="MANUFACTURER_PART_NUMBER" value="KPT-2012CGCK" constant="no"/>
 <attribute name="OTHER_PART_NUMBER" value="" constant="no"/>
 <attribute name="RS_PART_NUMBER" value="8610172P" constant="no"/>
+<attribute name="SUPPLIER_NAME" value="RS" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="B3FS-1000P" prefix="S">
+<description>&lt;b&gt;Switch Tact,6x6mm,flat act,gen purp,tape Plunger Tactile Switch, SPST-NO 0.05 A@ 24 V dc 0.5mm&lt;/b&gt;&lt;p&gt;
+&lt;/b&gt;&lt;br&gt;&lt;a href="&lt;br&gt;&lt;a href="https://componentsearchengine.com/Images/3/B3FS-1000P.jpg" title="Image"&gt;
+&lt;img src="https://componentsearchengine.com/Images/3/B3FS-1000P.jpg" width="150"&gt;&lt;/a&gt;&lt;p&gt;
+Source: &lt;a href="https://www.omron.co.jp/ecb/products/pdf/b3fs.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="B3FS-1000P" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="B3FS-1000P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="3D_PACKAGE" value="" constant="no"/>
+<attribute name="ALLIED_NUMBER" value="70175891" constant="no"/>
+<attribute name="DESCRIPTION" value="Switch Tact,6x6mm,flat act,gen purp,tape Plunger Tactile Switch, SPST-NO 0.05 A@ 24 V dc 0.5mm" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Omron Electronics" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="B3FS-1000P" constant="no"/>
+<attribute name="OTHER_PART_NUMBER" value="" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="6821254P" constant="no"/>
 <attribute name="SUPPLIER_NAME" value="RS" constant="no"/>
 </technology>
 </technologies>
@@ -4698,6 +4760,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LED28" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED29" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED30" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
+<part name="S1" library="SamacSys_Parts" deviceset="B3FS-1000P" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4774,6 +4837,7 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <instance part="LED28" gate="G$1" x="421.64" y="60.96" rot="R270"/>
 <instance part="LED29" gate="G$1" x="431.8" y="66.04" rot="R90"/>
 <instance part="LED30" gate="G$1" x="441.96" y="81.28" rot="R270"/>
+<instance part="S1" gate="G$1" x="58.42" y="15.24"/>
 </instances>
 <busses>
 </busses>
