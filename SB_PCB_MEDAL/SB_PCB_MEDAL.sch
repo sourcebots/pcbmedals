@@ -4709,6 +4709,40 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="supply1" urn="urn:adsk.eagle:library:371">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+ GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+ Please keep in mind, that these devices are necessary for the
+ automatic wiring of the supply signals.&lt;p&gt;
+ The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+ In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="VCC" symbol="VCC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4729,7 +4763,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="ICSP" library="con-lstb" deviceset="MA03-2" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
-<part name="BT1" library="SparkFun-Batteries" deviceset="BATTERY" device="-12MM_PTH"/>
+<part name="BT1" library="SparkFun-Batteries" deviceset="BATTERY" device="-12MM_PTH" value="3v"/>
 <part name="LED1" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED2" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED3" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
@@ -4761,6 +4795,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LED29" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="LED30" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="S1" library="SamacSys_Parts" deviceset="B3FS-1000P" device=""/>
+<part name="R7" library="resistor" deviceset="R-EU_" device="M0805" value="10k Ω"/>
+<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4794,6 +4830,10 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <text x="114.3" y="20.32" size="1.778" layer="95">PA3</text>
 <text x="114.3" y="0" size="1.778" layer="95">PB0</text>
 <text x="114.3" y="-20.32" size="1.778" layer="95">PB1</text>
+<text x="-25.4" y="55.88" size="1.778" layer="95">UNUSED - GND</text>
+<text x="-25.4" y="53.34" size="1.778" layer="95">UNUSED - GND</text>
+<text x="83.82" y="15.24" size="1.778" layer="95">RST</text>
+<text x="48.26" y="12.7" size="1.778" layer="95">GND</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="-7.62" y="66.04"/>
@@ -4838,6 +4878,8 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <instance part="LED29" gate="G$1" x="431.8" y="66.04" rot="R90"/>
 <instance part="LED30" gate="G$1" x="441.96" y="81.28" rot="R270"/>
 <instance part="S1" gate="G$1" x="58.42" y="15.24"/>
+<instance part="R7" gate="G$1" x="93.98" y="12.7"/>
+<instance part="P+2" gate="VCC" x="101.6" y="12.7" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -4897,6 +4939,23 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <pinref part="BT1" gate="G$1" pin="-"/>
 <wire x1="73.66" y1="30.48" x2="78.74" y2="30.48" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="[PCINT10/INT0/OC0A/CKOUT]PB2"/>
+<wire x1="-7.62" y1="55.88" x2="-25.4" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="[PCINT7/ICP/OC0B/ADC7]PA7"/>
+<wire x1="-7.62" y1="53.34" x2="-25.4" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="S1" gate="G$1" pin="2"/>
+<wire x1="58.42" y1="12.7" x2="55.88" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="1"/>
+<wire x1="55.88" y1="12.7" x2="48.26" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="15.24" x2="55.88" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="15.24" x2="55.88" y2="12.7" width="0.1524" layer="91"/>
+<junction x="55.88" y="12.7"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -4912,6 +4971,10 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <segment>
 <pinref part="BT1" gate="G$1" pin="+"/>
 <wire x1="63.5" y1="30.48" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5210,27 +5273,71 @@ Anton Nikitin - Henry Oliver-Edwards</text>
 <wire x1="119.38" y1="-20.32" x2="114.3" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="N$7" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="[PCINT10/INT0/OC0A/CKOUT]PB2"/>
-<wire x1="-7.62" y1="55.88" x2="-20.32" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="4"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="12.7" x2="88.9" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$20" class="0">
+<net name="N$8" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="[PCINT7/ICP/OC0B/ADC7]PA7"/>
-<wire x1="-7.62" y1="53.34" x2="-20.32" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="3"/>
+<wire x1="78.74" y1="15.24" x2="83.82" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,73.66,30.48,BT1,-,GND,,,"/>
+<approved hash="104,1,63.5,30.48,BT1,+,VCC,,,"/>
+<approved hash="106,1,78.74,15.24,N$8,,,,,"/>
+<approved hash="113,1,2.54,32.0396,ICSP,,,,,"/>
+<approved hash="115,1,60.96,30.48,VCC,,,,,"/>
+<approved hash="115,1,-13.97,66.04,VCC,,,,,"/>
+<approved hash="115,1,12.7,30.48,MOSI,,,,,"/>
+<approved hash="115,1,-13.97,50.8,MOSI,,,,,"/>
+<approved hash="115,1,90.17,50.8,MISO,,,,,"/>
+<approved hash="115,1,-7.62,33.02,MISO,,,,,"/>
+<approved hash="115,1,-7.62,30.48,USCK,,,,,"/>
+<approved hash="115,1,90.17,53.34,USCK,,,,,"/>
+<approved hash="115,1,116.84,40.64,PA2,,,,,"/>
+<approved hash="115,1,90.17,58.42,PA2,,,,,"/>
+<approved hash="115,1,116.84,60.96,PA1,,,,,"/>
+<approved hash="115,1,90.17,60.96,PA1,,,,,"/>
+<approved hash="115,1,116.84,20.32,PA3,,,,,"/>
+<approved hash="115,1,90.17,55.88,PA3,,,,,"/>
+<approved hash="115,1,116.84,-20.32,PB1,,,,,"/>
+<approved hash="115,1,-13.97,60.96,PB1,,,,,"/>
+<approved hash="115,1,57.15,12.7,GND,,,,,"/>
+<approved hash="115,1,-16.51,53.34,GND,,,,,"/>
+<approved hash="115,1,-16.51,55.88,GND,,,,,"/>
+<approved hash="115,1,76.2,30.48,GND,,,,,"/>
+<approved hash="115,1,90.17,66.04,GND,,,,,"/>
+<approved hash="115,1,116.84,0,PB0,,,,,"/>
+<approved hash="115,1,-13.97,63.5,PB0,,,,,"/>
+<approved hash="115,1,-7.62,27.94,RST,,,,,"/>
+<approved hash="115,1,-13.97,58.42,RST,,,,,"/>
+<approved hash="115,1,116.84,81.28,PA0,,,,,"/>
+<approved hash="115,1,90.17,63.5,PA0,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
+</note>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
