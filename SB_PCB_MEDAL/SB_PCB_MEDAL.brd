@@ -170,8 +170,10 @@
 <text x="-24" y="36" size="0.9" layer="26" rot="MR180">Schematic and PCB by:
 Anton Nikitin
 Henry Oliver-Edwards
+Kier Davis
 </text>
 <circle x="0" y="36" radius="6" width="0.1524" layer="46"/>
+<text x="24" y="35" size="1.2" layer="26" rot="MR0">2018 - Version 1.0</text>
 </plain>
 <libraries>
 <library name="SamacSys_Parts">
@@ -196,6 +198,24 @@ Henry Oliver-Edwards
 <wire x1="0.95" y1="1.05" x2="-1.75" y2="1.05" width="0.2" layer="25"/>
 <wire x1="-1.75" y1="1.05" x2="-1.75" y2="-1.05" width="0.2" layer="25"/>
 <wire x1="-1.75" y1="-1.05" x2="0.95" y2="-1.05" width="0.2" layer="25"/>
+</package>
+<package name="FOXSDLF/120-20">
+<description>&lt;b&gt;FOXSDLF/120-20&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-4.75" y="0" dx="5.5" dy="2" layer="1"/>
+<smd name="2" x="4.75" y="0" dx="5.5" dy="2" layer="1"/>
+<text x="-0.381" y="-0.047" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.381" y="-0.047" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-5.85" y1="2.5" x2="5.85" y2="2.5" width="0.254" layer="51"/>
+<wire x1="5.85" y1="2.5" x2="5.85" y2="-2.5" width="0.254" layer="51"/>
+<wire x1="5.85" y1="-2.5" x2="-5.85" y2="-2.5" width="0.254" layer="51"/>
+<wire x1="-5.85" y1="-2.5" x2="-5.85" y2="2.5" width="0.254" layer="51"/>
+<wire x1="-5.85" y1="-2.5" x2="5.85" y2="-2.5" width="0.254" layer="21"/>
+<wire x1="5.85" y1="-2.5" x2="5.85" y2="-1.25" width="0.254" layer="21"/>
+<wire x1="5.85" y1="2.5" x2="-5.85" y2="2.5" width="0.254" layer="21"/>
+<wire x1="-5.85" y1="-2.5" x2="-5.85" y2="-1.25" width="0.254" layer="21"/>
+<wire x1="5.85" y1="2.5" x2="5.85" y2="1.25" width="0.254" layer="21"/>
+<wire x1="-5.85" y1="2.5" x2="-5.85" y2="1.206" width="0.254" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1840,11 +1860,13 @@ design rules under a new name.</description>
 <element name="R4" library="resistor" package="M0805" value="10 Ω" x="6" y="18" rot="MR90"/>
 <element name="R5" library="resistor" package="M0805" value="10 Ω" x="18" y="18" rot="MR90"/>
 <element name="R6" library="resistor" package="M0805" value="10 Ω" x="30" y="18" rot="MR90"/>
-<element name="ICSP" library="con-lstb" package="MA03-2" value="" x="0" y="-18" rot="R180">
+<element name="ICSP" library="con-lstb" package="MA03-2" value="" x="0" y="-18" smashed="yes" rot="R180">
 <attribute name="MF" value="" x="0" y="-18" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="0" y="-18" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="3.81" y="-20.921" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="OC_FARNELL" value="unknown" x="0" y="-18" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="0" y="-18" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="1.27" y="-13.809" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="LED1" library="SamacSys_Parts" package="LEDC2012X78N" value="KPT-2012CGCK" x="-18" y="0" rot="R90">
 <attribute name="3D_PACKAGE" value="" x="-18" y="0" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2183,11 +2205,21 @@ design rules under a new name.</description>
 <attribute name="PACKAGE" value="QFP-32" x="0" y="0" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="SUPPLIER" value="Atmel" x="0" y="0" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="X1" library="con-cypressindustries" library_urn="urn:adsk.eagle:library:138" package="32005-601" package3d_urn="urn:adsk.eagle:package:6465/1" value="MINI-USB_SHIELD5P2-32005-601" x="0" y="-39" rot="R90">
+<element name="X1" library="con-cypressindustries" library_urn="urn:adsk.eagle:library:138" package="32005-601" package3d_urn="urn:adsk.eagle:package:6465/1" value="" x="0" y="-39" smashed="yes" rot="R90">
 <attribute name="MF" value="" x="0" y="-39" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="0" y="-39" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="-6.4859" y="-43.1155" size="1.27" layer="25" rot="R90"/>
 <attribute name="OC_FARNELL" value="unknown" x="0" y="-39" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="0" y="-39" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="7.8527" y="-43.3979" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="Y1" library="SamacSys_Parts" package="FOXSDLF/120-20" value="FOXSDLF_120-20" x="18" y="6" rot="MR0">
+<attribute name="DESCRIPTION" value="Crystal SMD 12.000MHz HC49S-SMD Crystal 12MHz, 30ppm, 2-Pin SMD, 11.7 x 5 x 4.5mm" x="18" y="6" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="HEIGHT" value="mm" x="18" y="6" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Fox" x="18" y="6" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="FOXSDLF/120-20" x="18" y="6" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="RS_PART_NUMBER" value="5476480" x="18" y="6" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="RS_PRICE/STOCK" value="http://uk.rs-online.com/web/p/products/5476480" x="18" y="6" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 </elements>
 <signals>
@@ -2372,6 +2404,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="AVCC">
 <contactref element="U1" pad="32"/>
+</signal>
+<signal name="N$7">
+<contactref element="Y1" pad="1"/>
+</signal>
+<signal name="N$8">
+<contactref element="Y1" pad="2"/>
 </signal>
 </signals>
 </board>

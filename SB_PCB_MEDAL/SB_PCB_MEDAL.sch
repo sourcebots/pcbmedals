@@ -182,6 +182,24 @@
 <wire x1="-1.75" y1="1.05" x2="-1.75" y2="-1.05" width="0.2" layer="25"/>
 <wire x1="-1.75" y1="-1.05" x2="0.95" y2="-1.05" width="0.2" layer="25"/>
 </package>
+<package name="FOXSDLF/120-20">
+<description>&lt;b&gt;FOXSDLF/120-20&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-4.75" y="0" dx="5.5" dy="2" layer="1"/>
+<smd name="2" x="4.75" y="0" dx="5.5" dy="2" layer="1"/>
+<text x="-0.381" y="-0.047" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.381" y="-0.047" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-5.85" y1="2.5" x2="5.85" y2="2.5" width="0.254" layer="51"/>
+<wire x1="5.85" y1="2.5" x2="5.85" y2="-2.5" width="0.254" layer="51"/>
+<wire x1="5.85" y1="-2.5" x2="-5.85" y2="-2.5" width="0.254" layer="51"/>
+<wire x1="-5.85" y1="-2.5" x2="-5.85" y2="2.5" width="0.254" layer="51"/>
+<wire x1="-5.85" y1="-2.5" x2="5.85" y2="-2.5" width="0.254" layer="21"/>
+<wire x1="5.85" y1="-2.5" x2="5.85" y2="-1.25" width="0.254" layer="21"/>
+<wire x1="5.85" y1="2.5" x2="-5.85" y2="2.5" width="0.254" layer="21"/>
+<wire x1="-5.85" y1="-2.5" x2="-5.85" y2="-1.25" width="0.254" layer="21"/>
+<wire x1="5.85" y1="2.5" x2="5.85" y2="1.25" width="0.254" layer="21"/>
+<wire x1="-5.85" y1="2.5" x2="-5.85" y2="1.206" width="0.254" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="KPT-2012CGCK">
@@ -205,6 +223,16 @@
 <vertex x="6.858" y="4.064"/>
 <vertex x="6.096" y="5.588"/>
 </polygon>
+</symbol>
+<symbol name="FOXSDLF_120-20">
+<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="0" y="0" length="middle" direction="in"/>
+<pin name="2" x="20.32" y="0" length="middle" direction="in" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -233,6 +261,31 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/8610172"&gt; Datashee
 <attribute name="OTHER_PART_NUMBER" value="" constant="no"/>
 <attribute name="RS_PART_NUMBER" value="8610172P" constant="no"/>
 <attribute name="SUPPLIER_NAME" value="RS" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FOXSDLF_120-20" prefix="Y">
+<description>&lt;b&gt;Crystal SMD 12.000MHz HC49S-SMD Crystal 12MHz, 30ppm, 2-Pin SMD, 11.7 x 5 x 4.5mm&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://uk.rs-online.com/webdocs/14f6/0900766b814f6551.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="FOXSDLF_120-20" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FOXSDLF/120-20">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="Crystal SMD 12.000MHz HC49S-SMD Crystal 12MHz, 30ppm, 2-Pin SMD, 11.7 x 5 x 4.5mm" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Fox" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="FOXSDLF/120-20" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="5476480" constant="no"/>
+<attribute name="RS_PRICE/STOCK" value="http://uk.rs-online.com/web/p/products/5476480" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4396,7 +4449,8 @@ Source: www.cypressindustries.com</description>
 <part name="LED30" library="SamacSys_Parts" deviceset="KPT-2012CGCK" device=""/>
 <part name="U1" library="Atmel_By_element14_Batch_1-00" deviceset="ATMEGA16U2-AU" device=""/>
 <part name="FRAME1" library="frames" deviceset="DOCFIELD" device=""/>
-<part name="X1" library="con-cypressindustries" library_urn="urn:adsk.eagle:library:138" deviceset="MINI-USB_SHIELD5P2-" device="32005-601" package3d_urn="urn:adsk.eagle:package:6465/1"/>
+<part name="X1" library="con-cypressindustries" library_urn="urn:adsk.eagle:library:138" deviceset="MINI-USB_SHIELD5P2-" device="32005-601" package3d_urn="urn:adsk.eagle:package:6465/1" value=""/>
+<part name="Y1" library="SamacSys_Parts" deviceset="FOXSDLF_120-20" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4445,6 +4499,11 @@ Source: www.cypressindustries.com</description>
 <wire x1="91.44" y1="-76.2" x2="53.34" y2="-76.2" width="0.1524" layer="95" style="shortdash"/>
 <wire x1="53.34" y1="-76.2" x2="53.34" y2="-27.94" width="0.1524" layer="95" style="shortdash"/>
 <text x="53.34" y="-25.4" size="1.778" layer="95">USB</text>
+<wire x1="-111.76" y1="-33.02" x2="-58.42" y2="-33.02" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="-58.42" y1="-33.02" x2="-58.42" y2="-55.88" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="-58.42" y1="-55.88" x2="-111.76" y2="-55.88" width="0.1524" layer="95" style="shortdash"/>
+<wire x1="-111.76" y1="-55.88" x2="-111.76" y2="-33.02" width="0.1524" layer="95" style="shortdash"/>
+<text x="-101.6" y="-30.48" size="1.778" layer="95">12MHz Crystal Oscillator</text>
 </plain>
 <instances>
 <instance part="R1" gate="G$1" x="124.46" y="73.66"/>
@@ -4489,6 +4548,7 @@ Source: www.cypressindustries.com</description>
 <instance part="U1" gate="A" x="-7.62" y="38.1"/>
 <instance part="FRAME1" gate="G$1" x="106.68" y="-86.36"/>
 <instance part="X1" gate="G41" x="73.66" y="-60.96"/>
+<instance part="Y1" gate="G$1" x="-96.52" y="-45.72"/>
 </instances>
 <busses>
 </busses>
@@ -4809,6 +4869,20 @@ Source: www.cypressindustries.com</description>
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="119.38" y1="-27.94" x2="114.3" y2="-27.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="Y1" gate="G$1" pin="1"/>
+<wire x1="-96.52" y1="-45.72" x2="-104.14" y2="-45.72" width="0.1524" layer="91"/>
+<label x="-104.14" y="-45.72" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="Y1" gate="G$1" pin="2"/>
+<wire x1="-76.2" y1="-45.72" x2="-68.58" y2="-45.72" width="0.1524" layer="91"/>
+<label x="-68.58" y="-45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
